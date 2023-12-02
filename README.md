@@ -1,11 +1,13 @@
+<p align='center'>
+  <img src='doc/logo.jpeg' alt='Banner' width='168px'>
+</p>
+
 # Libreblok CMS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mati365/libreblok?style=flat-square)
 [![GitHub issues](https://img.shields.io/github/issues/mati365/libreblok?style=flat-square)](https://github.com/Mati365/ts-c-compiler/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-<img src='doc/logo.jpeg' alt='Banner' width='200px' align='right'>
 
 🌿 Self hosted, free and open-source headless CMS designed to be fully compatible with Storyblok
 

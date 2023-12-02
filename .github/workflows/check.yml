@@ -17,10 +17,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 21.x
-          cache: yarn
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --production=false
+        run: npm install --frozen-lockfile --production=false
 
       - name: Turbo Cache
         uses: actions/cache@v3
@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}
 
-      - run: yarn build
-      - run: yarn lint
-      - run: yarn test
-      - run: yarn check:types
+      - run: npm build
+      - run: npm lint
+      - run: npm test
+      - run: npm check:types

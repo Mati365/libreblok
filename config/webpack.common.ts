@@ -18,7 +18,7 @@ export const createWebpackCommonConfig = ({
   declarations,
   skipTypeCheck,
   skipEslint,
-  extractStyles = true,
+  extractStyles,
 }: CommonWebpackConfig = {}): Configuration => {
   const devMode = isDevMode();
   const plugins: WebpackPluginInstance[] = [

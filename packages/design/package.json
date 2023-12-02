@@ -17,6 +17,16 @@
         "types": "./dist/cjs/index.d.ts",
         "default": "./dist/cjs/index.js"
       }
+    },
+    "./index.css": {
+      "import": {
+        "types": "./dist/esm/index.css",
+        "default": "./dist/esm/index.css"
+      },
+      "require": {
+        "types": "./dist/cjs/index.css",
+        "default": "./dist/cjs/index.css"
+      }
     }
   },
   "scripts": {

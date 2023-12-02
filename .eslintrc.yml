@@ -51,6 +51,7 @@ rules:
   react/react-in-jsx-scope: off
   react-hooks/rules-of-hooks: 'error'
   react-hooks/exhaustive-deps: off
+  import/no-unresolved: ['error', { "ignore": ["^@libreblok.+$"] }]
   '@typescript-eslint/no-throw-literal': off
   '@typescript-eslint/no-unnecessary-type-assertion': off
   '@typescript-eslint/no-import-type-side-effects': 'error'

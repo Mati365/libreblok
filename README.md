@@ -2,17 +2,14 @@
 
 🌿 Self hosted, free and open-source headless CMS designed to be fully compatible with Storyblok
 
-## Why?
+## Goals 🌟
 
-**Open-Source CMS Advantages:**
-
-1. **Flexibility:** Open-source CMS allows for extensive customization, adapting to specific needs.
-2. **Community Support:** A diverse community ensures continuous development, quick issue resolution, and innovation.
-
-**Self-Hosted Protection Against Vendor Lock-In:**
-
-1. **Autonomy:** Self-hosting provides control over data and infrastructure.
-2. **Independence:** Reduces reliance on proprietary hosting services, minimizing long-term dependencies and associated risks.
+- Free and open-source CMS without worry about vendor lock-in
+- Decentralized workspace state
+- API server and change synchronization is fully optional
+- Support for parallel workspace editing by multiple users at once
+- Ease of data backup just by saving workspace file
+- Easy expansion of the panel with plugins
 
 ## License
 

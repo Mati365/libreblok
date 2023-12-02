@@ -1,7 +1,6 @@
 /* eslint-disable import/no-default-export */
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { WebpackManifestPlugin } from 'webpack-manifest-plugin';
 import { merge } from 'webpack-merge';
 import * as dotenv from 'dotenv';
 
@@ -22,14 +21,10 @@ export default merge<Configuration>(
       clean: true,
       filename: 'client-[contenthash].js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/dashboard/public/',
     },
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Libreblok',
-      }),
-      new WebpackManifestPlugin({
-        publicPath: '/dashboard/public/',
       }),
     ],
   },

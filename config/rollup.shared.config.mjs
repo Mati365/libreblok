@@ -11,8 +11,9 @@ export const createPackageRollupConfig = ({ input }) => ({
       format: 'cjs',
     },
     {
-      file: './dist/esm/index.js',
+      dir: './dist/esm',
       format: 'esm',
+      preserveModules: true,
     },
   ],
   plugins: [

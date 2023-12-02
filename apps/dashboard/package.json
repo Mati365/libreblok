@@ -11,5 +11,8 @@
     "start": "node ./dist/server/server.js",
     "lint": "npx eslint src/",
     "check:types": "npx tsc --noEmit"
+  },
+  "dependencies": {
+    "@libreblok/design": "*"
   }
 }

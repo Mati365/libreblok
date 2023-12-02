@@ -1,0 +1,39 @@
+{
+  "name": "@libreblok/design",
+  "version": "1.0.0",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "clean": "run-script-os",
+    "clean:default": "rm -rf ./dist",
+    "clean:win32": "if exist dist rmdir /s /q dist",
+    "dev": "npx rollup --watch --config rollup.config.mjs",
+    "build": "npx rollup --config rollup.config.mjs",
+    "lint": "npx eslint --max-warnings=0 src/",
+    "test": "npx jest --passWithNoTests --c ./jest.config.mjs",
+    "check:types": "npx tsc --noEmit"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

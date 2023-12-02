@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/mati365/libreblok?style=flat-square)](https://github.com/Mati365/ts-c-compiler/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-<img src='doc/logo.jpeg' alt='Banner' width='168px' align='right'>
+<img src='doc/logo.jpeg' alt='Banner' width='224px' align='right'>
 
 🌿 Self hosted, free and open-source headless CMS designed to be fully compatible with Storyblok
 

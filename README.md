@@ -14,26 +14,6 @@
 1. **Autonomy:** Self-hosting provides control over data and infrastructure.
 2. **Independence:** Reduces reliance on proprietary hosting services, minimizing long-term dependencies and associated risks.
 
-
-## Architecture
-
-```
-+---------------------------------------------+
-|               Frontend CMS Node              |
-+---------------------------------------------+
-                   |
-                   v
-+---------------------------------------------+
-|               Node.js API                    |
-|                                             |
-|   +---------------------+                   |
-|   |   Postgres Database |                   |
-|   +---------------------+                   |
-|   |   Elasticsearch    |                   |
-|   +---------------------+                   |
-+---------------------------------------------+
-```
-
 ## License
 
 The MIT License (MIT)

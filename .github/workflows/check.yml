@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  - push
+
+concurrency:
+  group: check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint app and run tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --production=false
+
+      - name: Turbo Cache
+        uses: actions/cache@v3
+        with:
+          path: .turbo
+          key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ github.job }}-${{ github.ref_name }}
+
+      - run: yarn build
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn check:types

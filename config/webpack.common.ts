@@ -18,7 +18,7 @@ export const createWebpackCommonConfig = ({
   declarations,
   skipTypeCheck,
   skipEslint,
-  extractStyles,
+  extractStyles = true,
 }: CommonWebpackConfig = {}): Configuration => {
   const devMode = isDevMode();
   const plugins: WebpackPluginInstance[] = [
@@ -93,7 +93,13 @@ export const createWebpackCommonConfig = ({
           test: /\.(sa|sc|c)ss$/,
           use: [
             ...(extractStyles ? [MiniCssExtractPlugin.loader] : []),
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                modules: true,
+              },
+            },
             'sass-loader',
           ],
         },

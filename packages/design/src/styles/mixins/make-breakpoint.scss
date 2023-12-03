@@ -1,0 +1,23 @@
+@mixin for-mobile {
+  @media screen and (max-width: var(--breakpoint-xs)) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media screen and (min-width: var(--breakpoint-xs)) and (max-width: var(--breakpoint-sm)) {
+    @content;
+  }
+}
+
+@mixin for-medium-desktop {
+  @media screen and (min-width: var(--breakpoint-md)) {
+    @content;
+  }
+}
+
+@mixin for-large-desktop {
+  @media screen and (min-width: var(--breakpoint-lg)) {
+    @content;
+  }
+}

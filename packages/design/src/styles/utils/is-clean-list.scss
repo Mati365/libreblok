@@ -1,0 +1,9 @@
+@mixin make-clean-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.is-clean-list {
+  @include make-clean-list;
+}

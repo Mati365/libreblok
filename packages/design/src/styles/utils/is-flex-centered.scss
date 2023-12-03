@@ -1,0 +1,9 @@
+@mixin make-flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-flex-centered {
+  @include make-flex-centered;
+}

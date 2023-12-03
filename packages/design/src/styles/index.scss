@@ -1,0 +1,17 @@
+@use 'sass:meta';
+
+@layer design.variables {
+  @include meta.load-css('variables');
+}
+
+@layer design.reset {
+  @include meta.load-css('reset');
+}
+
+@layer design.utils {
+  @include meta.load-css('utils');
+}
+
+@layer design.base {
+  @include meta.load-css('base');
+}

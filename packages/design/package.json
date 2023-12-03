@@ -18,13 +18,19 @@
         "default": "./dist/cjs/index.js"
       }
     },
+    "./variables.scss": {
+      "import": {
+        "default": "./src/styles/variables/index.scss"
+      },
+      "require": {
+        "default": "./src/styles/variables/index.scss"
+      }
+    },
     "./index.css": {
       "import": {
-        "types": "./dist/esm/index.css",
         "default": "./dist/esm/index.css"
       },
       "require": {
-        "types": "./dist/cjs/index.css",
         "default": "./dist/cjs/index.css"
       }
     }

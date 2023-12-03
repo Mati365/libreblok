@@ -1,0 +1,9 @@
+@mixin make-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.is-text-ellipsis {
+  @include make-text-ellipsis;
+}

@@ -1,0 +1,44 @@
+// value order: xl, l&m, s&xs
+$spacer-1-sizes: 4px, 4px, 4px;
+$spacer-2-sizes: 8px, 8px, 8px;
+$spacer-3-sizes: 16px, 12px, 12px;
+$spacer-4-sizes: 20px, 18px, 16px;
+$spacer-5-sizes: 32px, 28px, 18px;
+$spacer-6-sizes: 48px, 36px, 24px;
+$spacer-7-sizes: 64px, 48px, 32px;
+$spacer-8-sizes: 96px, 72px, 48px;
+
+// prettier-ignore
+$spacers:
+  $spacer-1-sizes,
+  $spacer-2-sizes,
+  $spacer-3-sizes,
+  $spacer-4-sizes,
+  $spacer-5-sizes,
+  $spacer-6-sizes,
+  $spacer-7-sizes,
+  $spacer-8-sizes;
+
+:root {
+  @for $i from 1 through length($spacers) {
+    $spacer: nth($spacers, $i);
+
+    --spacer-#{$i}: #{nth($spacer, 1)};
+  }
+
+  @media screen and (max-width: var(--breakpoint-lg)) {
+    @for $i from 1 through length($spacers) {
+      $spacer: nth($spacers, $i);
+
+      --spacer-#{$i}: #{nth($spacer, 2)};
+    }
+  }
+
+  @media screen and (max-width: var(--breakpoint-sm)) {
+    @for $i from 1 through length($spacers) {
+      $spacer: nth($spacers, $i);
+
+      --spacer-#{$i}: #{nth($spacer, 3)};
+    }
+  }
+}

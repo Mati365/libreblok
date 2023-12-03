@@ -1,0 +1,9 @@
+@use '../mixins';
+
+.is-text {
+  @each $name in mixins.$text-definition-names {
+    &-#{$name} {
+      @include mixins.make-text-size($name);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use 'variables';
+
+@mixin define-space($name: null) {
+  @for $i from 1 through length(variables.$spacers) {
+    @if $name {
+      .space-#{$name}-#{$i} {
+        --space: var(--spacer-#{$i});
+      }
+    } @else {
+      .space-#{$i} {
+        --space: var(--spacer-#{$i});
+      }
+    }
+  }
+}
+
+@mixin define-breakpoint-space($start-breakpoint, $end-breakpoint, $name) {
+  @media (min-width: $start-breakpoint) and (max-width: $end-breakpoint) {
+    @include define-space($name);
+  }
+}
+
+@layer design.components {
+  .base {
+    width: var(--space);
+    min-width: var(--space);
+    height: var(--space);
+    min-height: var(--space);
+    font-size: 0;
+  }
+
+  .horizontal {
+    height: 1px;
+    min-height: 1px;
+  }
+
+  .vertical {
+    width: 1px;
+    min-width: 1px;
+  }
+
+  .inline {
+    display: inline-block;
+  }
+
+  @include define-space();
+  @include define-breakpoint-space(0, variables.$breakpoint-xs, 'xs');
+  @include define-breakpoint-space(
+    variables.$breakpoint-xs,
+    variables.$breakpoint-sm,
+    'sm'
+  );
+
+  @include define-breakpoint-space(
+    variables.$breakpoint-md,
+    variables.$breakpoint-lg,
+    'lg'
+  );
+
+  @include define-breakpoint-space(
+    variables.$breakpoint-sm,
+    variables.$breakpoint-md,
+    'md'
+  );
+}
